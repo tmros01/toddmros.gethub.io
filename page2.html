@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todd Mros - Statement</title>
+    <style>
+        /* Ensure the page takes up the full viewport */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            overflow: hidden; /* Prevents scrolling */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Video Background Container */
+        .video-wrapper {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #000; /* Fallback color */
+        }
+
+        /* Video styling for PC and Mobile */
+        video {
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            object-fit: cover; /* Ensures video fills screen without stretching */
+        }
+
+        /* Text Container */
+        .content-overlay {
+            height: 33.33vh; /* Consumes exactly one third of the page */
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* The Title Text */
+        h1 {
+            color: white;
+            font-size: clamp(1.5rem, 5vw, 3rem); /* Responsive font size */
+            padding: 0 20px;
+            margin: 0;
+            line-height: 1.2;
+            /* Slight shadow behind each letter */
+            text-shadow: 6px 6px 6px rgba(0, 0, 0, 0.7);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="video-wrapper">
+        <video autoplay muted loop playsinline poster="fallback-image.jpg">
+            <source src="D:\Website3\RochesterNYandTheFingerlakes.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <header class="content-overlay">
+        <h1>Todd Mros is Proudly Not a Member of Any Social Media Platform</h1>
+    </header>
+
+</body>
+</html>
